@@ -75,18 +75,24 @@ Remoção de imagens baixadas URL
 images/nome_da_imagem
 ```
 \
-Listar as imagens baixadas
+Listar as imagens baixadas URL
 ```
-```
-\
-Criação de volumes
-```
+images/
 ```
 \
-Listagem de volumes
-```
+Criação de volumes `volumes/create`
+```json
+{
+"Name":"Nome do volume"
+}
 ```
 \
-Deleção de volumes
+Listagem de volumes URL
 ```
+volumes/
+```
+\
+Deleção de volumes URL
+```
+volumes/nome_do_volume
 ```
