@@ -4,56 +4,89 @@
 ```sh
 pip install -r requirements.txt
 ```
-
 ## DOCS
 Criação de contêineres `containers/create`
 ```json
 {
   "Image":"alpine"
+  "Cmd":"echo Ola"
 }
 ```
-
-Inicialização de contêineres 
+\
+Inicialização de contêineres URL
 ```
 containers/stats/id_do_container
 ```
-
+\
 Parada de contêineres `containers/stop`
 ```json
 {
   "id":"alpine"
 }
 ```
-Deleção de contêineres
+\
+Deleção de contêineres URL
 ```
+containers/id_do_container
 ```
-Listar todos os contêineres, com e sem filtros por estados
+\
+Listar todos os contêineres, com e sem filtros URL
 ```
+containers/
+containers/?status=running
+containers/?status=restarting
+containers/?status=paused
+containers/?status=exited
 ```
-Criação de redes Docker
+\
+Criação de redes Docker `networks/create`
+```json
+{
+  "Name":"NomeRede"
+}
 ```
+\
+Deleção de redes Docker URL
 ```
-Deleção de redes Docker
+networks/id_rede
 ```
+\
+Listar todas as redes criadas, com e sem filtros URLs
 ```
-Listar todas as redes criadas, com e sem filtros
+networks/
+networks/?driver=bridge
+networks/?driver=host
+networks/?driver=overlay
+networks/?driver=ipvlan
+networks/?driver=macvlan
+networks/?driver=none
 ```
+\
+Pull de imagens `images/create`
+```json
+{
+  "fromImage": "alpine"
+}
+
 ```
-Pull de imagens
+\
+Remoção de imagens baixadas URL
 ```
+images/nome_da_imagem
 ```
-Remoção de imagens baixadas
-```
-```
+\
 Listar as imagens baixadas
 ```
 ```
+\
 Criação de volumes
 ```
 ```
+\
 Listagem de volumes
 ```
 ```
+\
 Deleção de volumes
 ```
 ```
